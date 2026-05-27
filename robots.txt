@@ -1,0 +1,7 @@
+# robots.txt for agripath.app
+# Crawl freely. No tracking on this site.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://agripath.app/sitemap.xml

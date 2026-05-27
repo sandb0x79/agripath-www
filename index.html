@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>AgriPath: GPS Spray Tracking App for Android | Phone-Based Swath Monitor</title>
+  <meta name="description" content="AgriPath is a GPS spray tracking app for Android that records swath coverage, flags overlap, counts acres, and watches the wind, fully offline. A practical alternative to $3,000+ tractor guidance monitors." />
+  <meta name="keywords" content="spray tracking app, GPS spray tracker, farm spray coverage app, herbicide application tracker, boom width tracker, spray drift app, tractor monitor app" />
+  <meta name="author" content="AgriPath" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#2f5d3a" />
+
+  <link rel="canonical" href="https://agripath.app/" />
+
+  <!-- Icons -->
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="shortcut icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="icon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="AgriPath" />
+  <meta property="og:title" content="AgriPath: GPS Spray Tracking App for Android" />
+  <meta property="og:description" content="Turn the phone in your pocket into a real-time spray monitor. Records swath polygons, flags overlap, counts acres, works fully offline. A practical alternative to $3,000+ tractor monitors." />
+  <meta property="og:url" content="https://agripath.app/" />
+  <meta property="og:image" content="https://agripath.app/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="AgriPath GPS spray tracking app shown on an Android phone with field swath coverage." />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AgriPath: GPS Spray Tracking App for Android" />
+  <meta name="twitter:description" content="Real-time swath mapping, overlap detection, wind alerts, offline. An honest alternative to commercial guidance monitors." />
+  <meta name="twitter:image" content="https://agripath.app/og.png" />
+  <meta name="twitter:image:alt" content="AgriPath GPS spray tracking app shown on an Android phone with field swath coverage." />
+
+  <!-- Structured data: SoftwareApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "AgriPath",
+    "alternateName": "AgriPath GPS Spray Tracker",
+    "description": "AgriPath turns an Android phone into a real-time GPS spray monitor. It records swath polygons at your configured boom width, flags overlap, calculates acres, captures wind data, and works fully offline. A practical alternative to $3,000+ commercial tractor guidance monitors.",
+    "applicationCategory": "BusinessApplication",
+    "applicationSubCategory": "Agriculture",
+    "operatingSystem": "Android",
+    "url": "https://agripath.app/",
+    "image": "https://agripath.app/icon.png",
+    "inLanguage": "en-US",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/LimitedAvailability",
+      "description": "Free during beta. Long-term pricing is not yet finalized."
+    },
+    "featureList": [
+      "Live swath polygon at configured boom width",
+      "Overlap shading for double-sprayed ground",
+      "Background GPS tracking with the screen off",
+      "Saved field boundary library",
+      "Always-on wind speed badge with drift threshold alerts",
+      "Session tagging for product, rate, and water volume",
+      "GeoJSON and KML export",
+      "Fully offline operation"
+    ],
+    "author": {
+      "@type": "Organization",
+      "name": "AgriPath",
+      "url": "https://agripath.app/",
+      "email": "hello@agripath.app"
+    }
+  }
+  </script>
+
+  <!-- Structured data: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Does it work without cell service?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. GPS doesn't need cell signal, it's satellites. Tracking, swath rendering, acreage, field boundaries, and session save all work fully offline. The two things that need internet are the initial wind forecast (cached when last fetched) and downloading new map tiles. Cache your map tiles over Wi-Fi before you head out and you're set."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How accurate is phone GPS compared to a real monitor?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A modern Android phone's GPS is typically accurate to within 3 to 5 meters under open sky, and most newer phones support multi-constellation receivers (GPS, GLONASS, Galileo). That's close to non-RTK monitor accuracy. It is not centimeter-level RTK. If you're running auto-steer on 30-inch rows, a phone is not your tool. For ground-rig herbicide application with a wide boom, it's plenty."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where does my spray data go?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Onto your phone. That's it. AgriPath stores everything in local SQLite and AsyncStorage on the device. There's no account, no server, no telemetry. When you export a session you pick where it goes: email, Drive, a USB transfer. We don't see it."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What about iPhone?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Android first. iOS is planned but not committed to a date. The honest reason: Android lets us distribute beta APKs directly to operators without a $99/year developer fee and a review queue, which has let us iterate fast with farmers. iPhone support will come once the core is stable."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does it cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Free during the beta. Long-term pricing isn't finalized; the goal is one-time purchase or a low flat annual fee, with no per-acre, no per-vehicle, no subscription that holds your past records hostage. Whatever it is, it will be a long way south of three thousand dollars."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Will it drain my battery?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Background GPS is the biggest battery draw on any phone. Plan on a 12V charger in the cab, same as you'd use for navigation on a long highway drive. Screen-off tracking is significantly easier on the battery than screen-on, and AgriPath supports both."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I export records for regulatory or chemical-rep reporting?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Every session can be re-exported at any time as GeoJSON or KML, complete with the product, rate, water volume, field name, date, and acreage. Hand it to a regulator, drop it into your farm management software, or open it in Google Earth and screenshot it. A PDF spray-record export is on the roadmap."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-row">
+    <a class="wordmark" href="/">
+      <img src="icon.png" alt="" width="36" height="36" />
+      <span>AgriPath</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="#what-it-does">What it does</a>
+      <a href="#vs-monitor">vs. a monitor</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Android &middot; Currently in beta</p>
+        <h1>The spray monitor you already own.<br /><span class="hero-accent">It&rsquo;s in your pocket.</span></h1>
+        <p class="lede">AgriPath records your swath in real time, shades the overlap, counts the acres, and watches the wind, on the phone you already carry, even when there&rsquo;s no signal for miles.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="mailto:hello@agripath.app?subject=AgriPath%20beta%20access">Request beta access</a>
+          <a class="btn-link" href="#what-it-does">See what it does &rarr;</a>
+        </div>
+        <p class="hero-footnote">Free during beta. Android today. iOS planned.</p>
+      </div>
+
+      <div class="hero-visual">
+        <div class="phone">
+          <div class="phone-notch" aria-hidden="true"></div>
+          <div class="phone-screen">
+            <img src="app-screenshot.jpg" alt="AgriPath running on an Android phone, showing a live spray session with green swath polygons painted across a satellite-view field, a wind speed badge, and a live acres counter." class="phone-screenshot" width="600" height="1300" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE PROBLEM -->
+  <section class="problem">
+    <div class="container narrow">
+      <p class="section-kicker">The situation</p>
+      <h2>A factory-installed guidance monitor runs three to ten thousand dollars.</h2>
+      <p>John Deere GreenStar, Trimble GFX, Raven Viper: all impressive boxes, and all priced for the cab of a new tractor. If you&rsquo;re running an older rig, a side-by-side, or an ATV-mounted sprayer, the math gets worse: the monitor often costs more than the sprayer.</p>
+      <p>The strange part is that your phone has the same GPS chip as a $1,200 receiver. The gap was never the hardware. It was the software, and the assumption that software like that needed a $50,000 vehicle wrapped around it.</p>
+      <p>AgriPath is the software, with no vehicle required.</p>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how" id="how">
+    <div class="container">
+      <p class="section-kicker">How it works</p>
+      <h2>Four steps from phone to spray record.</h2>
+      <ol class="steps">
+        <li>
+          <span class="step-num">1</span>
+          <h3>Set your boom width</h3>
+          <p>Create an equipment profile with the actual width in feet (10&prime; for an ATV spot sprayer, 60&prime; for a pull-behind, whatever you run). Hot-swap profiles between jobs.</p>
+        </li>
+        <li>
+          <span class="step-num">2</span>
+          <h3>Trace your field once</h3>
+          <p>Drive the perimeter once with boundary mode on. The app captures points every few meters and closes the loop into a saved GeoJSON polygon. Name it &ldquo;North 40&rdquo; and it&rsquo;s yours forever.</p>
+        </li>
+        <li>
+          <span class="step-num">3</span>
+          <h3>Start spraying</h3>
+          <p>Press start. A swath polygon paints behind your position at the configured width. Overlap zones darken to 100% opacity so you can see double-applied passes at a glance. Acres tick up live.</p>
+        </li>
+        <li>
+          <span class="step-num">4</span>
+          <h3>Finish and export</h3>
+          <p>One tap stops the session and saves it tagged with product, rate, water volume, and field. Export as GeoJSON or KML to email, Drive, Google Earth, or a regulator&rsquo;s file folder.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- WHAT IT DOES -->
+  <section class="features" id="what-it-does">
+    <div class="container">
+      <p class="section-kicker">What&rsquo;s in it</p>
+      <h2>The specific things, named specifically.</h2>
+
+      <div class="feature-grid">
+
+        <div class="feature-group">
+          <h3>Tracking</h3>
+          <dl>
+            <dt>Live swath polygon</dt>
+            <dd>Rendered at your configured boom width, second-by-second, as you drive.</dd>
+            <dt>Overlap shading</dt>
+            <dd>50% opacity fill stacks where passes cross. Double-sprayed ground becomes obvious.</dd>
+            <dt>Background GPS</dt>
+            <dd>Keeps recording with the screen off or the app minimized. Drop the phone in a cupholder.</dd>
+            <dt>Headland-friendly</dt>
+            <dd>Top-down tractor icon rotates with your heading so end-row turns read naturally.</dd>
+          </dl>
+        </div>
+
+        <div class="feature-group">
+          <h3>Fields</h3>
+          <dl>
+            <dt>Continuous boundary tracing</dt>
+            <dd>Drive the edge once. No pin-dropping. Capture interval is tuned for vehicle speeds.</dd>
+            <dt>Saved field library</dt>
+            <dd>Each field tracks session count and total sprayed acres over time.</dd>
+            <dt>Auto-tag detection</dt>
+            <dd>Start a session inside a saved boundary and the field is pre-selected. The name shows on the map.</dd>
+          </dl>
+        </div>
+
+        <div class="feature-group">
+          <h3>Wind &amp; weather</h3>
+          <dl>
+            <dt>Always-on wind badge</dt>
+            <dd>Current speed and compass-rotated arrow, top of screen. Tap for a 6-hour forecast.</dd>
+            <dt>Drift threshold alerts</dt>
+            <dd>Set your maximum (e.g. 10&nbsp;mph). Get a push notification when it&rsquo;s exceeded, even in the background.</dd>
+            <dt>Source: Open-Meteo</dt>
+            <dd>Free, no API key, backed by NOAA GFS data for U.S. forecasts. No account, no rate limits in normal use.</dd>
+          </dl>
+        </div>
+
+        <div class="feature-group">
+          <h3>Records &amp; export</h3>
+          <dl>
+            <dt>Session tagging</dt>
+            <dd>Each session captures product, application rate, water volume, and the field, editable after the fact.</dd>
+            <dt>History &amp; filtering</dt>
+            <dd>Search by product, filter by field or by 7/30/90-day windows.</dd>
+            <dt>GeoJSON and KML</dt>
+            <dd>Open in QGIS, ArcGIS, Google Earth, or hand to anyone who&rsquo;s asked you to prove what you sprayed where.</dd>
+          </dl>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- VS COMMERCIAL MONITOR -->
+  <section class="comparison" id="vs-monitor">
+    <div class="container">
+      <p class="section-kicker">An honest comparison</p>
+      <h2>AgriPath next to a factory monitor.</h2>
+      <p class="comparison-intro">We&rsquo;re not going to pretend a phone replaces a wired-in lightbar with auto-section control. Here&rsquo;s where AgriPath wins and where it doesn&rsquo;t.</p>
+
+      <div class="compare-table" role="table" aria-label="AgriPath vs commercial guidance monitor">
+        <div class="compare-row compare-head" role="row">
+          <div role="columnheader"></div>
+          <div role="columnheader">AgriPath</div>
+          <div role="columnheader">Commercial monitor<br /><span class="muted">(GreenStar, Trimble, Raven)</span></div>
+        </div>
+
+        <div class="compare-row" role="row">
+          <div role="rowheader">Hardware cost</div>
+          <div>The phone you have</div>
+          <div>$3,000 &ndash; $10,000+</div>
+        </div>
+
+        <div class="compare-row" role="row">
+          <div role="rowheader">Install time</div>
+          <div>Five minutes: download, open</div>
+          <div>Half a day with a dealer tech</div>
+        </div>
+
+        <div class="compare-row" role="row">
+          <div role="rowheader">Where your data lives</div>
+          <div>On your device. Period.</div>
+          <div>OEM cloud account (variable)</div>
+        </div>
+
+        <div class="compare-row" role="row">
+          <div role="rowheader">Subscription</div>
+          <div>None</div>
+          <div>Often required for full features</div>
+        </div>
+
+        <div class="compare-row" role="row">
+          <div role="rowheader">Software updates</div>
+          <div>App store, free</div>
+          <div>Dealer visit, sometimes paid</div>
+        </div>
+
+        <div class="compare-row" role="row">
+          <div role="rowheader">Works on any vehicle</div>
+          <div>Yes: ATV, side-by-side, pickup, tractor</div>
+          <div>Tied to the cab it&rsquo;s wired into</div>
+        </div>
+
+        <div class="compare-row" role="row">
+          <div role="rowheader">Wind alerts</div>
+          <div>Built in, configurable threshold</div>
+          <div>Varies by brand</div>
+        </div>
+
+        <div class="compare-row compare-row-weak" role="row">
+          <div role="rowheader">In-cab display size</div>
+          <div>Your phone (or a tablet)</div>
+          <div>Larger fixed screen</div>
+        </div>
+
+        <div class="compare-row compare-row-weak" role="row">
+          <div role="rowheader">Auto-section control</div>
+          <div>Not yet, visual overlap only</div>
+          <div>Yes, on most</div>
+        </div>
+
+        <div class="compare-row compare-row-weak" role="row">
+          <div role="rowheader">Lightbar / AB-line guidance</div>
+          <div>Not yet (on the roadmap)</div>
+          <div>Yes</div>
+        </div>
+      </div>
+
+      <p class="comparison-note">Rows in gray are where a wired-in monitor still has a real advantage. If you need auto-section shutoff on a 90-foot boom, buy the box. If you&rsquo;re hand-spraying ditches off a four-wheeler and writing acres on a clipboard afterward, AgriPath is the upgrade.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div class="container narrow">
+      <p class="section-kicker">Questions we actually get</p>
+      <h2>FAQ.</h2>
+
+      <details>
+        <summary>Does it work without cell service?</summary>
+        <p>Yes. GPS doesn&rsquo;t need cell signal, it&rsquo;s satellites. Tracking, swath rendering, acreage, field boundaries, and session save all work fully offline. The two things that need internet are the initial wind forecast (cached when last fetched) and downloading new map tiles. Cache your map tiles over Wi-Fi before you head out and you&rsquo;re set.</p>
+      </details>
+
+      <details>
+        <summary>How accurate is phone GPS compared to a real monitor?</summary>
+        <p>A modern Android phone&rsquo;s GPS is typically accurate to within 3&ndash;5 meters under open sky, and most newer phones support multi-constellation receivers (GPS, GLONASS, Galileo). That&rsquo;s close to non-RTK monitor accuracy. It is not centimeter-level RTK. If you&rsquo;re running auto-steer on 30-inch rows, a phone is not your tool. For ground-rig herbicide application with a wide boom, it&rsquo;s plenty.</p>
+      </details>
+
+      <details>
+        <summary>Where does my spray data go?</summary>
+        <p>Onto your phone. That&rsquo;s it. AgriPath stores everything in local SQLite and AsyncStorage on the device. There&rsquo;s no account, no server, no telemetry. When you export a session you pick where it goes: email, Drive, a USB transfer. We don&rsquo;t see it.</p>
+      </details>
+
+      <details>
+        <summary>What about iPhone?</summary>
+        <p>Android first. iOS is planned but not committed to a date. The honest reason: Android lets us distribute beta APKs directly to operators without a $99/year developer fee and a review queue, which has let us iterate fast with farmers. iPhone support will come once the core is stable.</p>
+      </details>
+
+      <details>
+        <summary>How much does it cost?</summary>
+        <p>Free during the beta. Long-term pricing isn&rsquo;t finalized; the goal is one-time purchase or a low flat annual fee, with no per-acre, no per-vehicle, no subscription that holds your past records hostage. Whatever it is, it will be a long way south of three thousand dollars.</p>
+      </details>
+
+      <details>
+        <summary>Will it drain my battery?</summary>
+        <p>Background GPS is the biggest battery draw on any phone. Plan on a 12V charger in the cab, same as you&rsquo;d use for navigation on a long highway drive. Screen-off tracking is significantly easier on the battery than screen-on, and AgriPath supports both.</p>
+      </details>
+
+      <details>
+        <summary>Can I export records for regulatory or chemical-rep reporting?</summary>
+        <p>Yes. Every session can be re-exported at any time as GeoJSON or KML, complete with the product, rate, water volume, field name, date, and acreage. Hand it to a regulator, drop it into your farm management software, or open it in Google Earth and screenshot it. A PDF spray-record export is on the roadmap.</p>
+      </details>
+
+    </div>
+  </section>
+
+  <!-- CTA STRIP -->
+  <section class="cta-strip">
+    <div class="container narrow center">
+      <h2>Currently testing with a small group of operators.</h2>
+      <p>If you&rsquo;d like an APK and a place to send feedback, drop us a line.</p>
+      <a class="btn btn-primary" href="mailto:hello@agripath.app?subject=AgriPath%20beta%20access">hello@agripath.app</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-row">
+    <div class="footer-brand">
+      <img src="icon.png" alt="" width="28" height="28" />
+      <span>AgriPath</span>
+    </div>
+    <div class="footer-meta">
+      <span>&copy; <span id="year">2026</span> AgriPath</span>
+      <span class="dot">&middot;</span>
+      <a href="mailto:hello@agripath.app">hello@agripath.app</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Tiny: keep the footer year fresh without a build step.
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

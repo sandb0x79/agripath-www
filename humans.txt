@@ -1,0 +1,14 @@
+/* TEAM */
+AgriPath
+Contact: hello [at] agripath.app
+Site: https://agripath.app/
+
+/* SITE */
+Last update: 2026-05-27
+Standards: HTML5, CSS3
+Components: Hand-written. No frameworks. No trackers.
+Software: Built with a text editor and a healthy distrust of build pipelines.
+
+/* THANKS */
+The farmers and applicators who keep telling us what's actually broken
+about commercial guidance monitors. This app exists because of them.
