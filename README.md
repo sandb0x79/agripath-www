@@ -23,6 +23,8 @@ Brand generation and font provenance are documented in `../AgriPath/assets/brand
 
 Before publishing, update the changed pages' `lastmod` dates in `sitemap.xml` and `Last update` in `humans.txt`. Check the phone layout, privacy link, mailto links, and JSON-LD against the visible FAQ. Do not add executable scripts or trackers.
 
+Whenever `style.css` changes, update its `?v=` release identifier in both `index.html` and `privacy.html`. Returning visitors may have the old stylesheet cached even after the new HTML deploys. Verify both a fresh visit and a visit with the previous stylesheet cached. Keep logo HTML dimensions at their intended display size as a fallback.
+
 ## DNS records (at your domain registrar)
 
 Point `agripath.app` to GitHub Pages by adding these records on the apex (`@`) record:
