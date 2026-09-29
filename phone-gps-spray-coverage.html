@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Phone GPS Accuracy for Spray Coverage | AgriPath</title><meta name="description" content="Understand AgriPath GPS accuracy readings, coverage gaps, boom width, overlap shading, and why total applied acres differ from unique field area." />
+<meta name="robots" content="index, follow" /><link rel="canonical" href="https://agripath.app/phone-gps-spray-coverage.html" />
+  <!-- Icons -->
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="icon" type="image/svg+xml" href="icon.svg" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=20260929-3" />
+
+
+<meta property="og:type" content="website" /><meta property="og:site_name" content="AgriPath" />
+<meta property="og:title" content="Phone GPS Accuracy for Spray Coverage | AgriPath" /><meta property="og:description" content="Understand AgriPath GPS accuracy readings, coverage gaps, boom width, overlap shading, and why total applied acres differ from unique field area." />
+<meta property="og:url" content="https://agripath.app/phone-gps-spray-coverage.html" /><meta property="og:image" content="https://agripath.app/og.png" />
+<meta property="og:image:alt" content="AgriPath logo. GPS spray coverage and useful records. Android beta." />
+<meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content="Phone GPS Accuracy for Spray Coverage | AgriPath" />
+<meta name="twitter:description" content="Understand AgriPath GPS accuracy readings, coverage gaps, boom width, overlap shading, and why total applied acres differ from unique field area." /><meta name="twitter:image" content="https://agripath.app/og.png" />
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Phone GPS Accuracy for Spray Coverage | AgriPath","description":"Understand AgriPath GPS accuracy readings, coverage gaps, boom width, overlap shading, and why total applied acres differ from unique field area.","url":"https://agripath.app/phone-gps-spray-coverage.html","inLanguage":"en","dateModified":"2026-09-29","isPartOf":{"@type":"WebSite","name":"AgriPath","url":"https://agripath.app/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"AgriPath","item":"https://agripath.app/"},{"@type":"ListItem","position":2,"name":"GPS accuracy and coverage","item":"https://agripath.app/phone-gps-spray-coverage.html"}]}</script>
+</head><body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><div class="container header-row">
+<a class="wordmark" href="/"><img src="logo.svg" alt="AgriPath home" width="166" height="69" /></a>
+<nav class="site-nav" aria-label="Primary"><a href="/#what-it-does">The app</a><a href="/#guides">Guides</a><a href="mailto:hello@agripath.app?subject=AgriPath%20beta%20access">Request beta</a></nav>
+</div></header>
+<main id="main">
+<div class="guide-heading container">
+<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">AgriPath</a><span aria-hidden="true">/</span><span>GPS accuracy and coverage</span></nav>
+<p class="section-kicker">Android beta guide</p><h1>Understand what phone GPS can record.</h1>
+<p class="guide-lead">AgriPath uses phone GPS to make an approximate record of where you traveled with recording active. The coverage shown on the map depends on both those locations and the boom width you entered.</p><p class="guide-updated">By AgriPath &middot; Updated <time datetime="2026-09-29">September 29, 2026</time></p>
+</div>
+<div class="container guide-layout">
+<nav class="guide-toc" aria-label="On this page"><p>On this page</p><ol><li><a href="#accuracy">Read the accuracy badge first</a></li><li><a href="#coverage">What the green coverage means</a></li><li><a href="#gaps">Why a route may contain gaps</a></li><li><a href="#check">A practical check before a working session</a></li></ol></nav>
+<article class="guide-body" aria-label="GPS accuracy and coverage"><section id="accuracy"><h2>Read the accuracy badge first</h2><p>A reading such as <strong>GPS +/-4 m</strong> is the accuracy reported by the phone. It is not a promise that every point is within four meters of the true location, and it is not the precision of the sprayer's application.</p>
+<p>Buildings, trees and other obstructions can affect GPS reception. Device hardware and the surrounding environment also matter. <a href="https://www.gps.gov/gps-accuracy">GPS.gov explains the factors behind GPS accuracy</a>.</p>
+<p>AgriPath's current recording filter excludes fixes with missing accuracy or reported accuracy worse than 15 meters. That cutoff helps reject poor points; it does not make accepted points survey-grade. A narrow boom can be smaller than the uncertainty in the phone's position.</p></section>
+<section id="coverage"><h2>What the green coverage means</h2><p>As usable points arrive, AgriPath draws coverage polygons between locations using the job's fixed boom width. It does not measure nozzle output or sense whether chemicals are flowing. Start and pause recording to match the work you want included.</p>
+<p>Repeated recorded passes create darker areas where the translucent polygons overlap. GPS drift and an incorrect boom width can also affect the shape and apparent overlap. The map is useful for reviewing a recorded route, but it cannot verify the exact treated edge or prove that an area received a particular dose.</p>
+<aside class="guide-callout"><h3>Applied acres include repeat passes</h3><p>Illustrative example: record 3 acres once, then repeat 1 of those acres. The total applied area is 4 acres, while the unique area is still 3 acres. AgriPath sums recorded swaths; it does not subtract overlaps to produce a unique-field-area total.</p></aside></section>
+<section id="gaps"><h2>Why a route may contain gaps</h2><p>Coverage is intentionally not drawn across every pair of received locations. The app rejects poor fixes and implausible jumps, skips very small movements, and does not join locations more than 30 seconds apart. After a pause or interruption, it starts a new segment instead of filling in the missing journey.</p>
+<p>If the GPS badge shows a weak or lost signal, check the phone's Location setting and move to a clearer view of the sky. Previously saved points remain, but reopening the app cannot recover locations it never received.</p>
+<p>In the updated beta, the vehicle marker follows GPS direction of travel. It becomes a dot when direction is unavailable or you are stopped. It does not show which way you are holding the phone.</p></section>
+<section id="check"><h2>A practical check before a working session</h2><ol><li>Confirm your equipment profile and actual boom width before starting the job.</li><li>With no chemical application, record a short route in an open area and compare the displayed coverage with the route you followed.</li><li>Include a pause, some travel while paused, and a resume. Check that the paused trip did not become a coverage stripe.</li><li>Repeat with the screen locked for part of the route. Use the <a href="offline-spray-tracking.html">offline recording checklist</a> to test the conditions you expect.</li></ol>
+<p>AgriPath records coverage and session details. It does not provide precision steering, control the sprayer, or switch sections automatically. Once the record is saved, you can <a href="export-spray-records.html">export its coverage and notes</a> for review.</p></section>
+<div class="guide-next"><h2>Continue reading</h2><ul><li><a href="offline-spray-tracking.html">Recording without cell service</a></li><li><a href="export-spray-records.html">Exporting spray records</a></li></ul><p><a href="/">See how AgriPath records field spraying</a></p></div>
+</article></div>
+<section class="cta-strip"><div class="container narrow center"><h2>Try it with your setup.</h2><p>The current beta is Android only. Request access and test a short session on your phone.</p><a class="btn btn-primary" href="mailto:hello@agripath.app?subject=AgriPath%20beta%20access">Request beta access</a></div></section>
+</main>
+<footer class="site-footer"><div class="container footer-row"><div class="footer-brand"><img src="logo-mono.svg" alt="AgriPath" width="136" height="56" /></div><div class="footer-meta"><a href="/#guides">All guides</a><a href="privacy.html">Privacy Policy</a><a href="mailto:hello@agripath.app">hello@agripath.app</a><span>&copy; 2026 AgriPath</span></div></div></footer>
+</body></html>

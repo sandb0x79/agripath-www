@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Export Spray Records as GeoJSON or KML | AgriPath</title><meta name="description" content="Save and export AgriPath spray sessions as GeoJSON or KML. See which coverage and session details are included, and how to retry sharing from History." />
+<meta name="robots" content="index, follow" /><link rel="canonical" href="https://agripath.app/export-spray-records.html" />
+  <!-- Icons -->
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="icon" type="image/svg+xml" href="icon.svg" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=20260929-3" />
+
+
+<meta property="og:type" content="website" /><meta property="og:site_name" content="AgriPath" />
+<meta property="og:title" content="Export Spray Records as GeoJSON or KML | AgriPath" /><meta property="og:description" content="Save and export AgriPath spray sessions as GeoJSON or KML. See which coverage and session details are included, and how to retry sharing from History." />
+<meta property="og:url" content="https://agripath.app/export-spray-records.html" /><meta property="og:image" content="https://agripath.app/og.png" />
+<meta property="og:image:alt" content="AgriPath logo. GPS spray coverage and useful records. Android beta." />
+<meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content="Export Spray Records as GeoJSON or KML | AgriPath" />
+<meta name="twitter:description" content="Save and export AgriPath spray sessions as GeoJSON or KML. See which coverage and session details are included, and how to retry sharing from History." /><meta name="twitter:image" content="https://agripath.app/og.png" />
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Export Spray Records as GeoJSON or KML | AgriPath","description":"Save and export AgriPath spray sessions as GeoJSON or KML. See which coverage and session details are included, and how to retry sharing from History.","url":"https://agripath.app/export-spray-records.html","inLanguage":"en","dateModified":"2026-09-29","isPartOf":{"@type":"WebSite","name":"AgriPath","url":"https://agripath.app/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"AgriPath","item":"https://agripath.app/"},{"@type":"ListItem","position":2,"name":"Exporting spray records","item":"https://agripath.app/export-spray-records.html"}]}</script>
+</head><body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><div class="container header-row">
+<a class="wordmark" href="/"><img src="logo.svg" alt="AgriPath home" width="166" height="69" /></a>
+<nav class="site-nav" aria-label="Primary"><a href="/#what-it-does">The app</a><a href="/#guides">Guides</a><a href="mailto:hello@agripath.app?subject=AgriPath%20beta%20access">Request beta</a></nav>
+</div></header>
+<main id="main">
+<div class="guide-heading container">
+<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">AgriPath</a><span aria-hidden="true">/</span><span>Exporting spray records</span></nav>
+<p class="section-kicker">Android beta guide</p><h1>Take your spray records with you.</h1>
+<p class="guide-lead">AgriPath exports a saved spray session as a map file containing recorded coverage and the session details you entered. Choose GeoJSON or KML according to the software used by the person receiving it.</p><p class="guide-updated">By AgriPath &middot; Updated <time datetime="2026-09-29">September 29, 2026</time></p>
+</div>
+<div class="container guide-layout">
+<nav class="guide-toc" aria-label="On this page"><p>On this page</p><ol><li><a href="#steps">Export a completed session</a></li><li><a href="#formats">Choose a file format</a></li><li><a href="#contents">What is included in the export</a></li><li><a href="#retry">If sharing fails or a file looks empty</a></li></ol></nav>
+<article class="guide-body" aria-label="Exporting spray records"><section id="steps"><h2>Export a completed session</h2><ol><li><strong>Open History.</strong> Find the session by product, field, or date range, then tap it to open Session Details.</li><li><strong>Check the details.</strong> Review the field, product, application rate and water volume. Edit incorrect entries before exporting.</li><li><strong>Choose Export GeoJSON or Export KML.</strong> AgriPath creates the selected file and opens your phone's share sheet.</li><li><strong>Choose a destination.</strong> Available options depend on the apps installed on your phone. An email or cloud destination may need internet access.</li><li><strong>Open the received file.</strong> Confirm that the coverage appears in the expected location and that the recipient can access the session details.</li></ol>
+<p>You can also use <strong>Save &amp; Export GeoJSON</strong> or <strong>Save &amp; Export KML</strong> after tapping Finish Job. This saves the session to History before sharing. Cancelling the share sheet does not delete the saved session.</p></section>
+<section id="formats"><h2>Choose a file format</h2><div class="guide-table-wrap"><table><caption>Two ways to share the same recorded coverage</caption><thead><tr><th scope="col">Format</th><th scope="col">Useful when</th><th scope="col">What AgriPath writes</th></tr></thead><tbody>
+<tr><th scope="row">GeoJSON</th><td>The recipient uses software that imports GeoJSON map data.</td><td>A FeatureCollection with a polygon for each recorded coverage segment and session details in its properties.</td></tr>
+<tr><th scope="row">KML</th><td>The recipient uses Google Earth or another KML-compatible viewer.</td><td>Polygon placemarks with session details in ExtendedData.</td></tr>
+</tbody></table></div>
+<p>Both formats describe the same saved coverage. Neither includes satellite-image tiles. The receiving viewer supplies its own background map, and how it displays the extra session details varies by viewer.</p></section>
+<section id="contents"><h2>What is included in the export</h2><ul><li>Recorded spray-coverage polygons and the session identifier.</li><li>Session start date and time, fixed boom width in feet, and total applied acres.</li><li>Product, application rate, water volume in gallons, and field name/id when entered or assigned.</li><li>An area-definition note explaining that totals include repeated passes and are not unique field area.</li></ul>
+<p>The field name identifies the assigned field; it does not add a separate field-boundary polygon to the session export. The export also does not include a weather snapshot, PDF report, or satellite image. Product and rate are the values entered by the user, not measurements from the sprayer.</p>
+<aside class="guide-callout"><h3>Do not add up a repeated session total</h3><p>The GeoJSON properties and KML ExtendedData repeat the session's total applied acreage on each coverage segment. If you import the file into a table, read that session total once. Summing that same value across all segments would overcount it.</p></aside></section>
+<section id="retry"><h2>If sharing fails or a file looks empty</h2><p>A session must contain recorded spray coverage to export. A field boundary by itself is not a spray-session export. If the share destination fails, keep the saved session and try again from History. Use the <a href="offline-spray-tracking.html">offline guide</a> to distinguish local file creation from delivery through an online service.</p>
+<p>An export is a copy for review or sharing, not a full app backup. AgriPath does not currently import these files to restore its database. Clearing app storage or uninstalling can remove local records, so retain any exported copies you need separately.</p>
+<p>Check the recipient's record requirements before relying on an export for reporting. Coverage inherits the <a href="phone-gps-spray-coverage.html">limitations of phone GPS</a>; a GPS record alone does not establish regulatory compliance.</p></section>
+<div class="guide-next"><h2>Continue reading</h2><ul><li><a href="offline-spray-tracking.html">Recording without cell service</a></li><li><a href="phone-gps-spray-coverage.html">GPS accuracy and coverage</a></li></ul><p><a href="/">See how AgriPath records field spraying</a></p></div>
+</article></div>
+<section class="cta-strip"><div class="container narrow center"><h2>Try it with your setup.</h2><p>The current beta is Android only. Request access and test a short session on your phone.</p><a class="btn btn-primary" href="mailto:hello@agripath.app?subject=AgriPath%20beta%20access">Request beta access</a></div></section>
+</main>
+<footer class="site-footer"><div class="container footer-row"><div class="footer-brand"><img src="logo-mono.svg" alt="AgriPath" width="136" height="56" /></div><div class="footer-meta"><a href="/#guides">All guides</a><a href="privacy.html">Privacy Policy</a><a href="mailto:hello@agripath.app">hello@agripath.app</a><span>&copy; 2026 AgriPath</span></div></div></footer>
+</body></html>

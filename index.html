@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>AgriPath | GPS Spray Coverage &amp; Records for Android</title>
-  <meta name="description" content="Record GPS spray coverage, see overlap, and save field session records on Android. Core tracking works offline. Export GeoJSON or KML. Join the beta." />
+  <title>Field Spraying App for GPS Coverage | AgriPath</title>
+  <meta name="description" content="Record field spraying on Android with GPS coverage, overlap shading, and local session records. Track offline and export GeoJSON or KML. Join the AgriPath beta." />
   <meta name="author" content="AgriPath" />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#16823A" />
@@ -21,13 +21,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=20260929-2" />
+  <link rel="stylesheet" href="style.css?v=20260929-3" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="AgriPath" />
-  <meta property="og:title" content="AgriPath | GPS Spray Coverage &amp; Records for Android" />
-  <meta property="og:description" content="Record GPS spray coverage, see overlap, and save field session records on Android. Core tracking works offline. Export GeoJSON or KML. Join the beta." />
+  <meta property="og:title" content="Field Spraying App for GPS Coverage | AgriPath" />
+  <meta property="og:description" content="Record field spraying on Android with GPS coverage, overlap shading, and local session records. Track offline and export GeoJSON or KML. Join the AgriPath beta." />
   <meta property="og:url" content="https://agripath.app/" />
   <meta property="og:image" content="https://agripath.app/og.png" />
   <meta property="og:image:width" content="1200" />
@@ -37,8 +37,8 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="AgriPath | GPS Spray Coverage &amp; Records for Android" />
-  <meta name="twitter:description" content="Record GPS spray coverage, see overlap, and save field session records on Android. Core tracking works offline. Export GeoJSON or KML. Join the beta." />
+  <meta name="twitter:title" content="Field Spraying App for GPS Coverage | AgriPath" />
+  <meta name="twitter:description" content="Record field spraying on Android with GPS coverage, overlap shading, and local session records. Track offline and export GeoJSON or KML. Join the AgriPath beta." />
   <meta name="twitter:image" content="https://agripath.app/og.png" />
   <meta name="twitter:image:alt" content="AgriPath logo. GPS spray coverage and useful records. Android beta." />
 
@@ -49,7 +49,7 @@
   "@type": "MobileApplication",
   "name": "AgriPath",
   "alternateName": "AgriPath GPS Spray Tracker",
-  "description": "Record GPS spray coverage, see overlap, and save field session records on Android. Core tracking works offline. Export GeoJSON or KML. Join the beta.",
+  "description": "Record field spraying on Android with GPS coverage, overlap shading, and local session records. Track offline and export GeoJSON or KML. Join the AgriPath beta.",
   "applicationCategory": "BusinessApplication",
   "applicationSubCategory": "Agriculture",
   "operatingSystem": "Android",
@@ -159,6 +159,7 @@
     <nav class="site-nav" aria-label="Primary">
       <a href="#what-it-does">What it does</a>
       <a href="#fit">Is it a fit?</a>
+      <a href="#guides">Guides</a>
       <a href="#faq">FAQ</a>
     </nav>
   </div>
@@ -171,8 +172,8 @@
     <div class="container hero-grid">
       <div class="hero-copy">
         <p class="eyebrow">GPS spray coverage app &middot; Android beta</p>
-        <h1>Know where you sprayed.<br /><span class="hero-accent">Keep the record.</span></h1>
-        <p class="lede">Record spray coverage, see overlapping passes, and save session details on the phone you already carry. GPS recording works offline; satellite imagery and optional weather need internet.</p>
+        <h1>Track field spraying<br /><span class="hero-accent">with your Android phone.</span></h1>
+        <p class="lede">AgriPath is a mobile field spraying app for Android. Record GPS coverage, see overlapping passes, and save spray-session records on your phone. Recording works offline; satellite imagery and optional weather need internet.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="mailto:hello@agripath.app?subject=AgriPath%20beta%20access">Request beta access</a>
           <a class="btn-link" href="#what-it-does">See what it does &rarr;</a>
@@ -250,8 +251,8 @@
             <dd>Translucent fill stacks where passes cross. Repeated recorded passes appear darker.</dd>
             <dt>Background GPS</dt>
             <dd>Records with the screen off or the app minimized when Android permits. If recording is interrupted, reopen the saved job and resume.</dd>
-            <dt>Headland-friendly</dt>
-            <dd>Top-down tractor icon rotates with your heading so end-row turns read naturally.</dd>
+            <dt>Location and travel direction</dt>
+            <dd>See your position on the map. The updated beta uses a vehicle marker while moving and a dot when direction is unavailable.</dd>
           </dl>
         </div>
 
@@ -271,7 +272,7 @@
           <h3>Wind &amp; weather</h3>
           <dl>
             <dt>Optional wind badge</dt>
-            <dd>Current speed and compass-rotated arrow, top of screen. Tap for a 6-hour forecast.</dd>
+            <dd>Wind speed and the direction it comes from appear in the weather badge. Tap for the available hourly forecast.</dd>
             <dt>Wind threshold alerts</dt>
             <dd>When weather is configured and enabled, set your threshold for notifications. Android may delay background checks; use on-site measurements before spraying.</dd>
             <dt>US weather forecasts</dt>
@@ -323,6 +324,14 @@
       </div>
     </div>
   </section>
+
+  <section class="guides-section" id="guides"><div class="container">
+    <p class="section-kicker">Practical guides</p><h2>Get more from your spray records.</h2>
+    <p class="guides-intro">Prepare for a session, understand the coverage, and share the result.</p>
+    <div class="guide-grid"><article class="guide-card"><h3><a href="offline-spray-tracking.html">Recording without cell service</a></h3><p>Learn what AgriPath records offline, what needs internet, and how to prepare your Android phone for screen-off recording and interrupted sessions.</p><a class="btn-link" href="offline-spray-tracking.html" aria-label="Read recording without cell service">Read the guide &rarr;</a></article>
+<article class="guide-card"><h3><a href="phone-gps-spray-coverage.html">GPS accuracy and coverage</a></h3><p>Understand AgriPath GPS accuracy readings, coverage gaps, boom width, overlap shading, and why total applied acres differ from unique field area.</p><a class="btn-link" href="phone-gps-spray-coverage.html" aria-label="Read gps accuracy and coverage">Read the guide &rarr;</a></article>
+<article class="guide-card"><h3><a href="export-spray-records.html">Exporting spray records</a></h3><p>Save and export AgriPath spray sessions as GeoJSON or KML. See which coverage and session details are included, and how to retry sharing from History.</p><a class="btn-link" href="export-spray-records.html" aria-label="Read exporting spray records">Read the guide &rarr;</a></article></div>
+  </div></section>
 
   <!-- FAQ -->
   <section class="faq" id="faq">
@@ -390,6 +399,7 @@
       <img src="logo-mono.svg" alt="AgriPath" width="136" height="56" />
     </div>
     <div class="footer-meta">
+      <a href="#guides">Guides</a>
       <a href="privacy.html">Privacy Policy</a>
       <span>&copy; <span id="year">2026</span> AgriPath</span>
       <span class="dot">&middot;</span>

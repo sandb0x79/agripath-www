@@ -44,3 +44,7 @@ And for `www`:
 | CNAME | www  | `<your-github-user>.github.io.` |
 
 Propagation usually takes 5-30 minutes. Verify with `dig agripath.app` or `nslookup agripath.app`.
+
+## Recording guides
+
+The homepage links to offline-spray-tracking.html, phone-gps-spray-coverage.html and export-spray-records.html. Keep instructions aligned with the Android app, links reciprocal, and sitemap entries current. These are plain static pages, not generated at deployment. The homepage targets field spraying and GPS coverage; each guide answers a distinct practical question. Search rankings and indexing are not guaranteed.
