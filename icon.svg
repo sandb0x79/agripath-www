@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+<title>Agripath Icon</title>
+<defs><clipPath id="c"><circle cx="256" cy="256" r="224"/></clipPath></defs>
+<g id="agripath-icon" clip-path="url(#c)">
+  <path d="M32 256 A224 224 0 0 1 480 256 C390 230 300 226 208 234 C132 240 75 249 32 264Z" fill="#19A9E0"/>
+  <path d="M20 250 C130 220 230 222 324 235 C390 244 446 260 500 284 L500 500 L20 500Z" fill="#16823A"/>
+  <path d="M18 292 C120 254 220 252 320 265 C386 274 448 292 500 316 L500 350 C410 308 322 292 232 294 C145 296 74 314 18 336Z" fill="#43A83F"/>
+  <path d="M12 270 C128 229 238 228 340 242 C411 251 465 267 510 287" fill="none" stroke="#fff" stroke-width="19" stroke-linecap="round"/>
+  <path d="M116 500 C139 420 185 360 252 317 C308 281 350 260 393 242 C416 232 437 225 462 218 C438 237 417 254 399 274 C367 309 343 339 318 371 C275 425 254 466 243 500Z" fill="#F7941D"/>
+  <path d="M102 500 C129 411 177 347 244 304 C301 268 347 247 389 231" fill="none" stroke="#fff" stroke-width="18" stroke-linecap="round"/>
+  <path d="M258 500 C272 453 297 408 334 361 C363 323 389 294 413 269 C434 248 452 235 474 223" fill="none" stroke="#fff" stroke-width="18" stroke-linecap="round"/>
+  <path d="M14 345 C111 306 202 294 288 299" fill="none" stroke="#fff" stroke-width="16" stroke-linecap="round"/>
+</g>
+</svg>

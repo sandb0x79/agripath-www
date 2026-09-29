@@ -16,14 +16,14 @@ button { font: inherit; cursor: pointer; }
 :root {
   --bg:           #faf8f3;   /* cream */
   --bg-warm:      #f1ece1;   /* deeper cream for bands */
-  --ink:          #1f2421;   /* near-black, slightly green */
+  --ink:          #08283a;   /* logo navy */
   --ink-soft:     #4a4f49;
-  --ink-muted:    #7a7f76;
+  --ink-muted:    #62685e;
   --rule:         #d9d2c1;
   --rule-soft:    #e7e0cf;
 
-  --green:        #2f5d3a;   /* a deeper, less neon take on the icon green */
-  --green-bright: #4cae50;   /* matches the app icon */
+  --green:        #16823a;   /* logo field green */
+  --green-bright: #43a83f;
   --green-soft:   #e2ecd9;
   --clay:         #b25c3c;   /* terracotta accent */
   --clay-soft:    #f1d9cf;
@@ -88,13 +88,20 @@ a { text-decoration: none; transition: color 120ms ease; }
   color: var(--ink);
   letter-spacing: -0.01em;
 }
-.wordmark img { border-radius: 7px; }
+.wordmark img { width: 166px; border-radius: 0; }
 .site-nav { display: flex; gap: 28px; font-size: 0.95rem; }
 .site-nav a { color: var(--ink-soft); }
 .site-nav a:hover { color: var(--green); }
 @media (max-width: 560px) {
-  .site-nav { gap: 16px; font-size: 0.9rem; }
+  .header-row { flex-wrap: wrap; justify-content: center; gap: 4px 24px; padding-top: 8px; padding-bottom: 8px; }
+  .wordmark img { width: 144px; }
+  .site-nav { justify-content: center; gap: 20px; font-size: 0.88rem; }
 }
+.site-nav a { display: inline-flex; align-items: center; min-height: 44px; }
+.skip-link { position: absolute; top: -100px; left: 16px; z-index: 20; background: #fff; color: var(--ink); padding: 12px; }
+.skip-link:focus { top: 8px; }
+:focus-visible { outline: 3px solid #126d96; outline-offset: 5px; }
+section[id], main[id] { scroll-margin-top: 140px; }
 
 /* ---------- Buttons ---------- */
 .btn {
@@ -181,9 +188,12 @@ a { text-decoration: none; transition: color 120ms ease; }
 /* ---------- Hero phone (real screenshot in CSS bezel) ---------- */
 .hero-visual {
   display: flex;
+  flex-direction: column;
+  gap: 24px;
   justify-content: center;
   align-items: center;
 }
+.hero-visual figcaption { font-size: 0.8rem; color: var(--ink-muted); text-align: center; }
 .phone {
   width: min(300px, 78vw);
   aspect-ratio: 9 / 19.5;
@@ -456,7 +466,7 @@ a { text-decoration: none; transition: color 120ms ease; }
   transition: transform 200ms ease;
 }
 .faq details[open] summary::after {
-  content: "\2013"; /* en dash */
+  content: "-";
 }
 .faq details p {
   margin-top: 14px;
@@ -512,7 +522,7 @@ a { text-decoration: none; transition: color 120ms ease; }
   font-size: 1rem;
   color: var(--ink);
 }
-.footer-brand img { border-radius: 6px; }
+.footer-brand img { width: 136px; border-radius: 0; }
 .footer-meta {
   display: inline-flex;
   align-items: center;
@@ -522,6 +532,18 @@ a { text-decoration: none; transition: color 120ms ease; }
 .footer-meta a { color: var(--ink-soft); border-bottom: 1px solid var(--rule); padding-bottom: 1px; }
 .footer-meta a:hover { color: var(--green); border-color: var(--green); }
 .dot { color: var(--rule); }
+
+.fit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.fit-card { padding: 28px; background: #fff; border: 1px solid var(--rule-soft); border-radius: 14px; }
+.fit-card h3 { color: var(--green); margin-bottom: 20px; }
+.fit-card ul { list-style: disc; padding-left: 20px; }
+.fit-card li { color: var(--ink-soft); margin-bottom: 12px; font-size: 1rem; }
+.fit-card li:last-child { margin-bottom: 0; }
+@media (max-width: 720px) { .fit-grid { grid-template-columns: 1fr; } }
+.policy { padding-top: 48px; padding-bottom: 48px; }
+.policy h1 { margin-bottom: 28px; }
+.policy p { margin-top: 22px; font-size: 1rem; }
+.policy a, .faq p a { text-decoration: underline; text-underline-offset: 3px; }
 
 /* ---------- Print / reduced motion ---------- */
 @media (prefers-reduced-motion: reduce) {

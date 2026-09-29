@@ -4,7 +4,7 @@ Contact: hello [at] agripath.app
 Site: https://agripath.app/
 
 /* SITE */
-Last update: 2026-05-27
+Last update: 2026-09-29
 Standards: HTML5, CSS3
 Components: Hand-written. No frameworks. No trackers.
 Software: Built with a text editor and a healthy distrust of build pipelines.

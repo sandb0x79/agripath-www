@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Privacy Policy | AgriPath</title>
+  <meta name="description" content="How AgriPath handles location, local spray records, optional weather, map services, exports, and deletion." />
+  <link rel="canonical" href="https://agripath.app/privacy.html" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="icon" type="image/svg+xml" href="icon.svg" />
+  <link rel="stylesheet" href="style.css" />
+</head><body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><div class="container header-row">
+  <a class="wordmark" href="/"><img src="logo.svg" alt="AgriPath home" width="963" height="400" /></a>
+  <a class="btn-link" href="/">Back to home</a>
+</div></header>
+<main id="main" class="container narrow policy">
+<h1>Privacy Policy</h1>
+<p>AgriPath Privacy Policy<br />Updated September 29, 2026</p>
+<p>Contact: hello@agripath.app</p>
+<p>AgriPath records precise GPS locations, timestamps, GPS accuracy, spray coverage, field boundaries, equipment settings and the spray notes you enter. Active jobs and completed records are stored in SQLite on your device; preferences and recent weather are stored locally. AgriPath has no account system, advertising or analytics SDK. We do not upload your spray history or field library.</p>
+<p>Background location is used only for recording you start and optional wind alerts you enable. Pausing recording stops adding points. The operating system can stop background work; after an interruption, recorded points remain available, but missing locations cannot be recovered. Wind jobs may read a recent location while alerts are enabled. Disable wind alerts to stop those checks.</p>
+<p>When you enable weather, AgriPath sends coordinates rounded to two decimal places to the AgriPath weather gateway hosted on Cloudflare. The gateway requests forecasts for those rounded coordinates from the US National Weather Service and, if that service is unavailable, possibly from WeatherAPI.com. Weather is offered for US locations only. The gateway does not store or log your coordinates or spray records: it keeps no request logs, uses a hash of your IP address (or its network prefix) only for temporary rate limiting, and briefly caches forecasts by rounded coordinates. Cloudflare receives your IP address and network metadata, and the weather providers receive the gateway&#x27;s request, under their own policies. Weather caching on your device is replaced by later forecasts. Weather is optional and needs internet access.</p>
+<p>Google Maps on Android and Apple Maps on iOS supply the map and satellite imagery. These map services may process device, network, diagnostic and location-related information under their providers&#x27; privacy policies. Tracking-only map mode hides satellite imagery; on iOS, a standard Apple Maps base map is used and cached map details may remain visible. This mode does not remove the platform&#x27;s map service from the app.</p>
+<p>Exports include coverage, date, acreage, boom width, field and spray notes. Only export to destinations you trust. The receiving service controls its copy. Temporary export files are stored in the device cache.</p>
+<p>You control retention: delete completed sessions and fields in the app, or discard the active job. Clear app storage or uninstall to remove all local data, including preferences and export cache. Android cloud backup is disabled. Exported copies held elsewhere are not deleted by these actions.</p>
+<p>We do not sell personal information. Service providers process requests to provide maps and optional weather. Contact hello@agripath.app for privacy questions or requests. We cannot recover records that exist only on your device.</p>
+<p>This app is intended for adult agricultural operators. Phone GPS and forecast data are estimates, not precision guidance or an on-site wind measurement. Check GPS quality, local conditions and product instructions before spraying.</p>
+<p>Provider policies: <a href="https://policies.google.com/privacy">Google</a>, <a href="https://www.apple.com/legal/privacy/">Apple</a>, <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare</a>, <a href="https://www.weather.gov/privacy">National Weather Service</a>, <a href="https://www.weatherapi.com/privacy.aspx">WeatherAPI.com</a>.</p>
+<p><a href="mailto:hello@agripath.app">Contact hello@agripath.app</a></p>
+</main>
+<footer class="site-footer"><div class="container footer-row"><div class="footer-brand"><img src="logo-mono.svg" alt="AgriPath" width="963" height="400" /></div><a href="/">AgriPath home</a></div></footer>
+</body></html>
