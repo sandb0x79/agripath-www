@@ -85,7 +85,7 @@
       "name": "Does AgriPath work outside the United States?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Core GPS recording, field boundaries, local records, and GeoJSON/KML exports have no US-only location restriction. They are expected to work outside the US, but international use has not been field-tested. Map imagery depends on the map provider's coverage. Weather forecasts and wind alerts are supported for US locations only. The current interface is English and uses feet, acres, gallons, and mph."
+        "text": "Core GPS recording, field boundaries, local records, and GeoJSON/KML exports have no US-only location restriction. They are expected to work outside the US, but international use has not been field-tested. Map imagery depends on the map provider's coverage. Weather forecasts and wind alerts use the National Weather Service in the US and WeatherAPI.com in other countries; weather outside the US has not been field-tested. The current interface is English and uses feet, acres, gallons, and mph."
       }
     },
     {
@@ -109,7 +109,7 @@
       "name": "Where does my spray data go?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Spray records, field boundaries and equipment stay on your phone unless you export them. Optional weather sends rounded coordinates through the AgriPath weather gateway on Cloudflare to the National Weather Service and possibly WeatherAPI.com. Google Maps also processes data under its privacy policy. Read the AgriPath Privacy Policy for details."
+        "text": "Spray records, field boundaries and equipment stay on your phone unless you export them. Optional weather sends rounded coordinates through the AgriPath weather gateway on Cloudflare to the National Weather Service for US locations or WeatherAPI.com for other countries. Google Maps also processes data under its privacy policy. Read the AgriPath Privacy Policy for details."
       }
     },
     {
@@ -179,7 +179,7 @@
           <a class="btn-link" href="#what-it-does">See what it does &rarr;</a>
         </div>
         <p class="hero-footnote">Free during beta. Android available for testing. iOS under consideration.</p>
-        <p class="hero-footnote"><strong>Weather and wind alerts: US locations only.</strong> GPS recording does not require weather. <a class="btn-link" href="#faq">International use</a></p>
+        <p class="hero-footnote"><strong>Weather and wind alerts: National Weather Service in the US, WeatherAPI.com elsewhere.</strong> Weather outside the US has not been field-tested. GPS recording does not require weather. <a class="btn-link" href="#faq">International use</a></p>
       </div>
 
       <figure class="hero-visual">
@@ -275,8 +275,8 @@
             <dd>Wind speed and the direction it comes from appear in the weather badge. Tap for the available hourly forecast.</dd>
             <dt>Wind threshold alerts</dt>
             <dd>When weather is configured and enabled, set your threshold for notifications. Android may delay background checks; use on-site measurements before spraying.</dd>
-            <dt>US weather forecasts</dt>
-            <dd>National Weather Service forecasts, with WeatherAPI.com as a possible fallback. Optional, US-only, and internet-dependent. Forecasts are estimates, not on-site measurements.</dd>
+            <dt>Weather forecasts</dt>
+            <dd>National Weather Service forecasts in the US, with WeatherAPI.com as a possible fallback. WeatherAPI.com forecasts in other countries, not yet field-tested. Optional and internet-dependent. Forecasts are estimates, not on-site measurements.</dd>
           </dl>
         </div>
 
@@ -341,7 +341,7 @@
 
       <details>
         <summary>Does AgriPath work outside the United States?</summary>
-        <p>Core GPS recording, field boundaries, local records, and GeoJSON/KML exports have no US-only location restriction. They are expected to work outside the US, but international use has not been field-tested. Map imagery depends on the map provider's coverage. Weather forecasts and wind alerts are supported for US locations only. The current interface is English and uses feet, acres, gallons, and mph.</p>
+        <p>Core GPS recording, field boundaries, local records, and GeoJSON/KML exports have no US-only location restriction. They are expected to work outside the US, but international use has not been field-tested. Map imagery depends on the map provider's coverage. Weather forecasts and wind alerts use the National Weather Service in the US and WeatherAPI.com in other countries; weather outside the US has not been field-tested. The current interface is English and uses feet, acres, gallons, and mph.</p>
       </details>
 
       <details>
@@ -356,7 +356,7 @@
 
       <details>
         <summary>Where does my spray data go?</summary>
-        <p>Spray records, field boundaries and equipment stay on your phone unless you export them. Optional weather sends rounded coordinates through the AgriPath weather gateway on Cloudflare to the National Weather Service and possibly WeatherAPI.com. Google Maps also processes data under its privacy policy. Read the AgriPath Privacy Policy for details.</p>
+        <p>Spray records, field boundaries and equipment stay on your phone unless you export them. Optional weather sends rounded coordinates through the AgriPath weather gateway on Cloudflare to the National Weather Service for US locations or WeatherAPI.com for other countries. Google Maps also processes data under its privacy policy. Read the AgriPath Privacy Policy for details.</p>
       </details>
 
       <details>
