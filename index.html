@@ -59,7 +59,7 @@
   "featureList": [
     "Recoverable local spray jobs with pause and resume",
     "Visual overlap shading",
-    "Total applied acres including repeated passes",
+    "Total applied area including repeated passes",
     "Background GPS subject to Android restrictions",
     "Saved field boundaries",
     "GeoJSON and KML exports with spray notes",
@@ -85,7 +85,7 @@
       "name": "Does AgriPath work outside the United States?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Core GPS recording, field boundaries, local records, and GeoJSON/KML exports have no US-only location restriction. They are expected to work outside the US, but international use has not been field-tested. Map imagery depends on the map provider's coverage. Weather forecasts and wind alerts use the National Weather Service in the US and WeatherAPI.com in other countries; weather outside the US has not been field-tested and may be unavailable in some regions. The current interface is English and uses feet, acres, gallons, and mph."
+        "text": "Core GPS recording, field boundaries, local records, and GeoJSON/KML exports have no US-only location restriction. They are expected to work outside the US, but international use has not been field-tested. Map imagery depends on the map provider's coverage. Weather forecasts and wind alerts use the National Weather Service in the US and WeatherAPI.com in other countries; weather outside the US has not been field-tested and may be unavailable in some regions. The current interface is English. Units follow your phone's region and can be changed in Settings: metric (metres, hectares, litres) or imperial (feet, acres, gallons), with wind in mph, km/h, or m/s."
       }
     },
     {
@@ -101,7 +101,7 @@
       "name": "How accurate is phone GPS?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Phone GPS accuracy varies with the device and surroundings. AgriPath shows reported accuracy and excludes poor fixes and implausible jumps. It is an approximate recording tool, not precision guidance, auto-steer or section control. Total applied acres include overlaps and repeated passes, not just unique field area."
+        "text": "Phone GPS accuracy varies with the device and surroundings. AgriPath shows reported accuracy and excludes poor fixes and implausible jumps. It is an approximate recording tool, not precision guidance, auto-steer or section control. Total applied area includes overlaps and repeated passes, not just unique field area."
       }
     },
     {
@@ -198,7 +198,7 @@
     <div class="container narrow">
       <p class="section-kicker">From a pass to a saved record</p>
       <h2>Less to remember at the end of a spray job.</h2>
-      <p>Set your boom width and start recording. AgriPath draws approximate coverage as you move, shades repeated passes, and adds up total applied acres.</p>
+      <p>Set your boom width and start recording. AgriPath draws approximate coverage as you move, shades repeated passes, and adds up total applied area.</p>
       <p>Finish with a record you can find again: the field, date, product, rate, water volume, and recorded coverage. Save it on your phone and export it when you need to share.</p>
       <p>Built around the job you already do.</p>
     </div>
@@ -213,7 +213,7 @@
         <li>
           <span class="step-num">1</span>
           <h3>Set your boom width</h3>
-          <p>Create an equipment profile with your actual spray width in feet. Choose the right profile before starting each job; coverage calculations use that width.</p>
+          <p>Create an equipment profile with your actual spray width in feet or metres. Choose the right profile before starting each job; coverage calculations use that width.</p>
         </li>
         <li>
           <span class="step-num">2</span>
@@ -223,7 +223,7 @@
         <li>
           <span class="step-num">3</span>
           <h3>Start spraying</h3>
-          <p>Press start. A swath polygon paints behind your position at the configured width. Overlap zones appear darker so you can see double-applied passes at a glance. Total applied acres tick up live, including repeated passes.</p>
+          <p>Press start. A swath polygon paints behind your position at the configured width. Overlap zones appear darker so you can see double-applied passes at a glance. Total applied area ticks up live, including repeated passes.</p>
         </li>
         <li>
           <span class="step-num">4</span>
@@ -329,7 +329,7 @@
     <p class="section-kicker">Practical guides</p><h2>Get more from your spray records.</h2>
     <p class="guides-intro">Prepare for a session, understand the coverage, and share the result.</p>
     <div class="guide-grid"><article class="guide-card"><h3><a href="offline-spray-tracking.html">Recording without cell service</a></h3><p>Learn what AgriPath records offline, what needs internet, and how to prepare your Android phone for screen-off recording and interrupted sessions.</p><a class="btn-link" href="offline-spray-tracking.html" aria-label="Read recording without cell service">Read the guide &rarr;</a></article>
-<article class="guide-card"><h3><a href="phone-gps-spray-coverage.html">GPS accuracy and coverage</a></h3><p>Understand AgriPath GPS accuracy readings, coverage gaps, boom width, overlap shading, and why total applied acres differ from unique field area.</p><a class="btn-link" href="phone-gps-spray-coverage.html" aria-label="Read gps accuracy and coverage">Read the guide &rarr;</a></article>
+<article class="guide-card"><h3><a href="phone-gps-spray-coverage.html">GPS accuracy and coverage</a></h3><p>Understand AgriPath GPS accuracy readings, coverage gaps, boom width, overlap shading, and why total applied area differs from unique field area.</p><a class="btn-link" href="phone-gps-spray-coverage.html" aria-label="Read gps accuracy and coverage">Read the guide &rarr;</a></article>
 <article class="guide-card"><h3><a href="export-spray-records.html">Exporting spray records</a></h3><p>Save and export AgriPath spray sessions as GeoJSON or KML. See which coverage and session details are included, and how to retry sharing from History.</p><a class="btn-link" href="export-spray-records.html" aria-label="Read exporting spray records">Read the guide &rarr;</a></article></div>
   </div></section>
 
@@ -341,7 +341,7 @@
 
       <details>
         <summary>Does AgriPath work outside the United States?</summary>
-        <p>Core GPS recording, field boundaries, local records, and GeoJSON/KML exports have no US-only location restriction. They are expected to work outside the US, but international use has not been field-tested. Map imagery depends on the map provider's coverage. Weather forecasts and wind alerts use the National Weather Service in the US and WeatherAPI.com in other countries; weather outside the US has not been field-tested and may be unavailable in some regions. The current interface is English and uses feet, acres, gallons, and mph.</p>
+        <p>Core GPS recording, field boundaries, local records, and GeoJSON/KML exports have no US-only location restriction. They are expected to work outside the US, but international use has not been field-tested. Map imagery depends on the map provider's coverage. Weather forecasts and wind alerts use the National Weather Service in the US and WeatherAPI.com in other countries; weather outside the US has not been field-tested and may be unavailable in some regions. The current interface is English. Units follow your phone's region and can be changed in Settings: metric (metres, hectares, litres) or imperial (feet, acres, gallons), with wind in mph, km/h, or m/s.</p>
       </details>
 
       <details>
@@ -351,7 +351,7 @@
 
       <details>
         <summary>How accurate is phone GPS?</summary>
-        <p>Phone GPS accuracy varies with the device and surroundings. AgriPath shows reported accuracy and excludes poor fixes and implausible jumps. It is an approximate recording tool, not precision guidance, auto-steer or section control. Total applied acres include overlaps and repeated passes, not just unique field area.</p>
+        <p>Phone GPS accuracy varies with the device and surroundings. AgriPath shows reported accuracy and excludes poor fixes and implausible jumps. It is an approximate recording tool, not precision guidance, auto-steer or section control. Total applied area includes overlaps and repeated passes, not just unique field area.</p>
       </details>
 
       <details>
