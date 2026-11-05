@@ -529,6 +529,7 @@ section[id], main[id] { scroll-margin-top: 140px; }
 @media (max-width: 720px) { .fit-grid { grid-template-columns: 1fr; } }
 .policy { padding-top: 48px; padding-bottom: 48px; }
 .policy h1 { margin-bottom: 28px; }
+.policy h2 { margin-top: 44px; font-size: clamp(1.4rem, 3vw, 1.8rem); }
 .policy p { margin-top: 22px; font-size: 1rem; }
 .policy a, .faq p a { text-decoration: underline; text-underline-offset: 3px; }
 
@@ -576,3 +577,30 @@ section[id], main[id] { scroll-margin-top: 140px; }
 .guide-next { border-top: 1px solid var(--rule); padding-top: 32px; }
 @media (max-width: 880px) { .guide-grid { grid-template-columns: 1fr; }.guide-layout { grid-template-columns: 1fr; gap: 36px; }.guide-toc { position: static; } }
 @media (max-width: 560px) { .site-nav { gap: 12px; font-size: .84rem; }.guide-body th, .guide-body td { padding: 8px; font-size: .88rem; } }
+
+/* ---------- Newsletter signup ---------- */
+.newsletter { padding: clamp(56px, 8vw, 96px) 0; background: var(--bg); }
+.newsletter h2 { margin: 8px 0 14px; }
+.signup { margin-top: 28px; }
+.signup label { display: block; font-weight: 600; font-size: 1rem; margin-bottom: 8px; color: var(--ink); }
+.signup-row { display: flex; gap: 12px; flex-wrap: wrap; }
+.signup input {
+  flex: 1 1 260px;
+  min-height: 52px;
+  padding: 12px 14px;
+  font: inherit;
+  font-size: 1rem;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+}
+.signup input:focus-visible { outline: 3px solid #126d96; outline-offset: 2px; border-color: var(--green); }
+.signup .btn { min-height: 52px; cursor: pointer; flex: 0 0 auto; }
+.signup-note { margin-top: 14px; font-size: 0.9rem; color: var(--ink-muted); }
+.signup-note a { text-decoration: underline; text-underline-offset: 3px; }
+.notice { padding-top: 72px; padding-bottom: 96px; }
+.notice h1 { font-size: clamp(2rem, 4.5vw, 3rem); margin-bottom: 20px; }
+.notice p { margin-top: 16px; }
+.notice .btn { margin-top: 28px; }
+@media (max-width: 560px) { .signup .btn { flex: 1 1 100%; } }
