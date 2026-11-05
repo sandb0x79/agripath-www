@@ -604,3 +604,28 @@ section[id], main[id] { scroll-margin-top: 140px; }
 .notice p { margin-top: 16px; }
 .notice .btn { margin-top: 28px; }
 @media (max-width: 560px) { .signup .btn { flex: 1 1 100%; } }
+
+/* ---------- Beta request form (in the green CTA strip) ---------- */
+.beta-form { max-width: 620px; margin: 0 auto; text-align: left; }
+.beta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px 16px; }
+.beta-wide { grid-column: 1 / -1; }
+.beta-field label { display: block; color: #fff; font-weight: 600; font-size: 0.95rem; margin-bottom: 6px; }
+.beta-optional { font-weight: 400; color: rgba(255,255,255,0.8); }
+.beta-field input {
+  width: 100%;
+  min-height: 50px;
+  padding: 12px 14px;
+  font: inherit;
+  font-size: 1rem;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+}
+.beta-field input::placeholder { color: var(--ink-muted); opacity: 0.8; }
+.beta-field input:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }
+.beta-hint { display: block; margin-top: 6px; font-size: 0.85rem; color: rgba(255,255,255,0.85); }
+.beta-form .btn { margin-top: 24px; min-height: 52px; cursor: pointer; }
+.cta-strip .beta-note { font-family: var(--sans); font-size: 0.9rem; max-width: none; margin: 16px 0 0; color: rgba(255,255,255,0.85); }
+.beta-note a { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width: 600px) { .beta-grid { grid-template-columns: 1fr; } .beta-form .btn { width: 100%; } }

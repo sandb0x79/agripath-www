@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=20261105-1" />
+  <link rel="stylesheet" href="style.css?v=20261105-2" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
@@ -176,7 +176,7 @@
         <h1>Track field spraying<br /><span class="hero-accent">with your Android phone.</span></h1>
         <p class="lede">AgriPath is a mobile field spraying app for Android. Record GPS coverage, see overlapping passes, and save spray-session records on your phone. Recording works offline; satellite imagery and optional weather need internet.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="mailto:hello@agripath.app?subject=AgriPath%20beta%20access">Request beta access</a>
+          <a class="btn btn-primary" href="#beta">Request beta access</a>
           <a class="btn-link" href="#what-it-does">See what it does &rarr;</a>
         </div>
         <p class="hero-footnote">Free during beta. Android available for testing. iOS under consideration.</p>
@@ -401,11 +401,37 @@
   </section>
 
   <!-- CTA STRIP -->
-  <section class="cta-strip">
+  <section class="cta-strip" id="beta">
     <div class="container narrow center">
       <h2>Try it on your next field test.</h2>
-      <p>Request the Android beta APK and tell us how recording works with your setup.</p>
-      <a class="btn btn-primary" href="mailto:hello@agripath.app?subject=AgriPath%20beta%20access">hello@agripath.app</a>
+      <p>Request the Android beta. Tell us a little about your setup and we will email you the install link.</p>
+      <form class="beta-form" action="https://app.kit.com/forms/10149999/subscriptions" method="post">
+        <div class="beta-grid">
+          <div class="beta-field">
+            <label for="beta-name">First name</label>
+            <input id="beta-name" name="fields[first_name]" type="text" autocomplete="given-name" required />
+          </div>
+          <div class="beta-field">
+            <label for="beta-email">Email</label>
+            <input id="beta-email" name="email_address" type="email" autocomplete="email" required />
+            <span class="beta-hint">Use the Google account on your Android phone if you can.</span>
+          </div>
+          <div class="beta-field">
+            <label for="beta-phone">Phone make and model</label>
+            <input id="beta-phone" name="fields[phone_make_and_model]" type="text" required placeholder="Samsung Galaxy A15" />
+          </div>
+          <div class="beta-field">
+            <label for="beta-location">State or country</label>
+            <input id="beta-location" name="fields[location]" type="text" placeholder="Oklahoma" />
+          </div>
+          <div class="beta-field beta-wide">
+            <label for="beta-spray">What you spray, and roughly how many acres <span class="beta-optional">(optional)</span></label>
+            <input id="beta-spray" name="fields[what_you_spray_and_acres]" type="text" placeholder="Wheat and pasture, about 800 acres" />
+          </div>
+        </div>
+        <button class="btn btn-primary" type="submit">Request beta access</button>
+        <p class="beta-note">You confirm by email first. Beta testers also get the monthly AgriPath updates, with an unsubscribe link in every email. See the <a href="privacy.html#newsletter">Privacy Policy</a>. Rather email? <a href="mailto:hello@agripath.app?subject=AgriPath%20beta%20access">hello@agripath.app</a></p>
+      </form>
     </div>
   </section>
 
