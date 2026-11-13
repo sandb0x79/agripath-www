@@ -1,14 +1,21 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
 <title>Agripath Icon</title>
-<defs><clipPath id="c"><circle cx="256" cy="256" r="224"/></clipPath></defs>
-<g id="agripath-icon" clip-path="url(#c)">
-  <path d="M32 256 A224 224 0 0 1 480 256 C390 230 300 226 208 234 C132 240 75 249 32 264Z" fill="#19A9E0"/>
-  <path d="M20 250 C130 220 230 222 324 235 C390 244 446 260 500 284 L500 500 L20 500Z" fill="#16823A"/>
-  <path d="M18 292 C120 254 220 252 320 265 C386 274 448 292 500 316 L500 350 C410 308 322 292 232 294 C145 296 74 314 18 336Z" fill="#43A83F"/>
-  <path d="M12 270 C128 229 238 228 340 242 C411 251 465 267 510 287" fill="none" stroke="#fff" stroke-width="19" stroke-linecap="round"/>
-  <path d="M116 500 C139 420 185 360 252 317 C308 281 350 260 393 242 C416 232 437 225 462 218 C438 237 417 254 399 274 C367 309 343 339 318 371 C275 425 254 466 243 500Z" fill="#F7941D"/>
-  <path d="M102 500 C129 411 177 347 244 304 C301 268 347 247 389 231" fill="none" stroke="#fff" stroke-width="18" stroke-linecap="round"/>
-  <path d="M258 500 C272 453 297 408 334 361 C363 323 389 294 413 269 C434 248 452 235 474 223" fill="none" stroke="#fff" stroke-width="18" stroke-linecap="round"/>
-  <path d="M14 345 C111 306 202 294 288 299" fill="none" stroke="#fff" stroke-width="16" stroke-linecap="round"/>
+<desc>Logo symbol geometry, scaled to a 512 canvas. The swath border is the swath outline itself, so it is even on both sides.</desc>
+<defs>
+  <clipPath id="c"><circle cx="210" cy="210" r="190"/></clipPath>
+  <clipPath id="below-horizon"><path d="M-10 222 C92 187 190 186 280 197 C344 205 394 218 440 238 L440 440 L-10 440 Z"/></clipPath>
+</defs>
+<g id="agripath-icon" transform="translate(256 256) scale(1.178947) translate(-210 -210)">
+  <g clip-path="url(#c)">
+    <path id="sky" d="M10 210 A190 190 0 0 1 410 210 C330 188 250 184 170 190 C105 195 52 204 10 218 Z" fill="#19A9E0"/>
+    <path id="field" d="M0 205 C95 180 185 182 270 193 C333 201 382 214 430 234 L430 430 L0 430 Z" fill="#16823A"/>
+    <path id="far-field" d="M0 238 C90 207 178 204 268 213 C326 219 380 233 430 253 L430 286 C350 251 275 238 196 240 C120 242 55 257 0 278 Z" fill="#43A83F"/>
+    <path id="field-guide" d="M-5 286 C80 252 160 242 270 248" fill="none" stroke="#FFFFFF" stroke-width="12" stroke-linecap="butt"/>
+    <g clip-path="url(#below-horizon)">
+      <path id="spray-swath" d="M92 430 C112 363 151 313 210 275 C260 243 296 226 333 211 C354 202 371 197 392 192 C371 207 353 221 338 238 C310 269 289 294 267 322 C229 369 211 405 201 430 Z"
+        fill="#F7941D" stroke="#FFFFFF" stroke-width="24" stroke-linejoin="round" paint-order="stroke"/>
+    </g>
+    <path id="horizon-gap" d="M-10 222 C92 187 190 186 280 197 C344 205 394 218 440 238" fill="none" stroke="#FFFFFF" stroke-width="16" stroke-linecap="round"/>
+  </g>
 </g>
 </svg>
